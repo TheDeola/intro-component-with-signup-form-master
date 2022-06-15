@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --DarkBlue: hsl(249, 10%, 26%);
+    --GrayishBlue: hsl(246, 25%, 77%);
+    --font-family: 'Poppins', sans-serif;
+    --Fontsize: 16px;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+body {
+    background-color: var(--Red);
+    background-image: url(./images/bg-intro-mobile.png);
+}
+.container {
+    max-width: 350px;
+    margin: auto;
+    padding: 30px 20px;
+    color: white;
+    font-family: var(--font-family);
+    text-align: center;
+    font-size: var(--Fontsize);
+}
+.section-sub {
+    border: .5px solid var(--Blue);
+    border-radius: 10px;
+    background-color: var(--Blue);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 70px;
+    margin-top: 50px;
+}
+.section-sub .light {
+    font-weight: 400;
+}
+.form {
+    background-color: white;
+    color: var(--GrayishBlue);
+    border-radius: 10px;
+    padding: 30px;
+}
+input {
+    padding: 10px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    width: 250px;
+    border-radius: 5px;
+    border: .5px solid var(--GrayishBlue);
+    font-family: var(--font-family);
+}
+#submit {
+    background-color: var(--Green);
+    color: white;
+    border: .5px solid var(--Green);
+    padding: 15px;
+}
+#submit:hover {
+    cursor: pointer;
+    background-color: hsl(154, 74%, 76%);
+}
+.form-para {
+    font-size: 10px;
+    padding: 3px 10px;
+}
+.form-span {
+    color: var(--Red);
+    font-weight: 700;
+}
+.hide {
+    display: none;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+/* Desktop Responsivenes Starts Here */
+
+@media screen and (min-width:768px) {
+    body {
+        background-image: url(./images/bg-intro-desktop.png);
+    }
+    .container {
+        display: flex;
+        min-width: 900px;
+        margin: 70px auto;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .main {
+        margin: auto;
+        width: 40vw;
+        padding-right: 70px;
+        padding-top: 40px;
+        text-align: left;
+    }
+    .main h1 {
+        font-size: 40px;
+    }
+    .section {
+        width: 35vw;
+    }
+    .form {
+        padding: 25px;
+    }
+    input {
+        width: 25vw;
+    }
+}
