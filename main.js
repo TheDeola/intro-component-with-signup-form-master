@@ -1,81 +1,31 @@
-function validateForm() {
-    let fname = document.getElementById["myForm"]["fname"].value;
-    console.log(fname);
+let id = (id) => document.getElementById(id);
+let classes = (classes) => document.getElementsByClassName(classes);
 
-    let lname = document.getElementById["myForm"]["lname"].value;
-    console.log(lname);
+const emailPattern =  /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-    let email = document.getElementById["myForm"]["email"].value;
-    console.log(email);
+let firstName = id('firstName'),
+    lastName = id('lastName'),
+    Password = id('password'),
+    form = id('myForm'),
+    errorMsg = classes('error'),
+    errorIcon = classes('errorIcon');
 
-    let password = document.getElementById["myForm"]["password"].value;
-    console.log(password);
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
+    inputCheck(firstName, 0, 'First Name cannot be empty')
+    inputCheck(lastName, 1, 'Last Name cannot be empty')
+    inputCheck(email, 2, 'Looks like this is not an email')
+    inputCheck(password, 3, 'Password cannot be empty')
 
-    if (fname == " ") {
-        alert("First name cannot be empty");
-        return false;
-    }
-    if (lname == " ") {
-        alert("Last name cannot be empty");
-        return false;
-    }
-    if (email == " ") {
-        alert("Looks like this is not an email");
-        return false;
-    }
-    if (password == " ") {
-        alert("Password cannot be empty");
-        return false;
-    }
-}
+})
 
-function validateFirstName(fname) {
-    if (fname == null) {
-        alert("First name cannot be empty");
-        return false;
-    }
-    if (fname.length > 10) {
-        alert("First name cannot exceed 10");
-        return false;
-    } else {
-        return true
-    }
-}
-
-function validateLastName(lname) {
-    if (lname == null) {
-        alert("Last name cannot be empty");
-        return false;
-    }
-    if (lname.length > 10) {
-        alert("Last name cannot exceed 10")
-    } else {
-        return true
-    }
-}
-
-function validateEmail(email) {
-    if (email == null) {
-        alert("Please fill out your email address");
-        return false;
-    }
-    if (email.length < 10) {
-        alert("Looks like this is not an email")
-    } else {
-        return true
-    }
-}
-
-function validatePassword(password) {
-    if (password == null) {
-        alert("Please fill out password");
-        return false;
-    }
-    if (email.length < 10) {
-        alert("Password cannot be empty")
-    } else {
-        return true
+let inputCheck = (id, serial, message) => {
+    if(id.value.trim() === '') {
+        errorMsg[serial].innerHTML = message;
+        errorIcon[serial].style.opacity = '1';
+        id.style.border = '1px solid hsl(0, 100%, 74%)';
+        id.style.color = 'hsl(0, 100%, 74%)'
     }
 }
 
