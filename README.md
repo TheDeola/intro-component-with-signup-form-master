@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Solution URL: [Solution](https://github.com/TheDeola/intro-component-with-signup-form-master/)
+- Live Site URL: [Live Site](https://intro-sign-up-form-js.netlify.app/)
 
 ## My process
 
@@ -54,7 +54,7 @@ Users should be able to:
 
 ### Useful resources
 
-- [W3schools](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [W3schools](https://www.example.com)
 - [MDN](https://www.example.com) 
 
 
