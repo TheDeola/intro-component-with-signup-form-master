@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --DarkBlue: hsl(249, 10%, 26%);
+    --GrayishBlue: hsl(246, 25%, 77%);
+    --font-family: 'Poppins', sans-serif;
+    --Fontsize: 16px;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+body {
+    background-color: var(--Red);
+    background-image: url(./images/bg-intro-mobile.png);
+    
+}
+.container {
+    max-width: 350px;
+    margin: auto;
+    padding: 30px 20px;
+    color: white;
+    font-family: var(--font-family);
+    text-align: center;
+    font-size: var(--Fontsize);
+}
+.section-sub {
+    border: .5px solid var(--Blue);
+    border-radius: 10px;
+    background-color: var(--Blue);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 70px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.section-sub .light {
+    font-weight: 400;
+}
+.form {
+    background-color: white;
+    color: var(--GrayishBlue);
+    border-radius: 10px;
+    padding: 30px;
+}
+input {
+    padding: 10px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    width: 250px;
+    border-radius: 5px;
+    border: .5px solid var(--GrayishBlue);
+    font-weight: 500;
+    font-family: var(--font-family);
+}
+#submit {
+    background-color: var(--Green);
+    color: white;
+    width: 250px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+    border: .5px solid var(--Green);
+    padding: 15px;
+    text-transform: uppercase;
+}
+#submit:hover {
+    cursor: pointer;
+    background-color: hsl(154, 74%, 76%);
+}
+.form-para {
+    font-size: 10px;
+    padding: 3px 10px;
+}
+.form-span a {
+    color: var(--Red);
+    font-weight: 700;
+    text-decoration: none;
+}
+.form input:focus {
+    border: 1px solid black;
+    outline: none;
+}
+.form div img {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin: 20px 0px 5px -30px;
+    opacity: 0;
+}
+
+
+
+/* .errorEmail {
+    position: absolute;
+    margin-top: 6rem;
+    margin-left: 20rem;
+    color: var(--Red);
+    font-size: 0.65rem;
+} */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+/*VALIDATION STYLING CHANGES*/
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+small{
+    visibility: hidden;
+}
+.form-control >i{
+    position: absolute;
+    top: 22px;
+    right:10px;
+    visibility: hidden;
+}
+
+.form-control small{
+    font-size: 12px;
+    visibility: hidden;
+    position: absolute;
+    bottom:0; 
+    left: 0;
+    margin-left:40px
+}
+.form-control.error input{
+    border-color: red;
+
+}
+
+.form-control.error i.fa-exclamation-circle{ 
+    color:rgb(255, 60, 0);
+    visibility:visible
+}
+
+.form-control.error small{
+    visibility: visible;
+}
+
+.form-control.success input{
+    border-color: green;
+
+}
+.form-control.success i.fa-check-circle{
+    color:green;
+    visibility:visible
+}
+
+/* Desktop Responsivenes Starts Here */
+
+@media screen and (min-width:768px) {
+    body {
+        background-image: url(./images/bg-intro-desktop.png);
+    }
+    .container {
+        display: flex;
+        min-width: 900px;
+        margin: 70px auto;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .main {
+        margin: auto;
+        width: 40vw;
+        padding-right: 70px;
+        padding-top: 40px;
+        text-align: left;
+    }
+    .main h1 {
+        font-size: 40px;
+    }
+    .section {
+        width: 35vw;
+    }
+    .form {
+        padding: 25px;
+    }
+    input {
+        width: 25vw;
+    }
+    #submit {
+        width: 25vw;
+    }
+}
