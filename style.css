@@ -97,9 +97,9 @@ input {
     width: 15px;
     height: 15px;
     margin: 20px 0px 5px -30px;
-    opacity: 0;
+    /* opacity: 0; */
 }
-.error {
+.error-img {
     position: absolute;
     margin-top: 6rem;
     margin-left: 20rem;
@@ -112,6 +112,15 @@ input {
     margin-left: 20rem;
     color: var(--Red);
     font-size: 0.65rem;
+}
+.form-field.error input {
+    border-color: var(--error-color);
+}
+.form-field.success input {
+    border-color: var(--success-color);
+}
+.form-field small {
+    color: var(--error-color);
 }
 .attribution { 
     font-size: 11px; 

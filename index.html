@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="./style.css">
   <title>Frontend Mentor | Intro component with sign up form</title>
 </head>
 
@@ -24,32 +24,28 @@
       
       <div>
         <form action="#" class="form" id="myForm" onsubmit="return validateForm()" method="post">
-          <div>
+          <div class="form-field error success">
             <input type="text" name="fname" id="fname" value="" placeholder="First Name">
             <img src="/images/icon-error.svg" alt="error-icon" class="errorIcon">
-            <div class="error"></div>
-            <!-- <p class="error-msg hide" style="color:red; font-size: xx-small; margin-top: 0; font-style: italic; text-align: right;">First name cannot be empty</p> -->
+            <small class="error-img"></small>
           </div>
           
-          <div>
+          <div class="form-field error success">
             <input type="text" name="lname" id="lname" value="" placeholder="Last Name">
-            <!-- <p class="error-msg hide" style="color:red; font-size: xx-small; margin-top: 0; font-style: italic; text-align: right;">Last name cannot be empty</p> -->
             <img src="/images/icon-error.svg" alt="error-icon" class="errorIcon">
-            <div class="error"></div>
+            <small class="error-img"></small>
           </div>
           
-          <div>
+          <div class="form-field error success">
             <input type="text" name="email" id="email" value="" placeholder="email@example.com">
-            <!-- <p class="error-msg hide" style="color:red; font-size: xx-small; margin-top: 0; font-style: italic; text-align: right;">Looks like this is not an email</p> -->
             <img src="/images/icon-error.svg" alt="error-icon" class="errorIcon">
-            <div class="error"></div>
+            <small class="error-img"></small>
           </div>
         
-          <div>
+          <div class="form-field error success">
             <input type="password" name="password" id="password" value="" placeholder="Password">
-            <!-- <p class="error-msg hide" style="color:red; font-size: xx-small; margin-top: 0; font-style: italic; text-align: right;">Password cannot be empty</p> -->
             <img src="/images/icon-error.svg" alt="error-icon" class="errorIcon">
-            <div class="error"></div>
+            <small class="error-img"></small>
           </div>
   
           <button type="submit" name="button" id="submit">Claim your free trial</button>
